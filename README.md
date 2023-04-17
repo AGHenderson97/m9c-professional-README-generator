@@ -1,7 +1,6 @@
 # m9c-professional-README-generator
-Node.js Challenge
 
-Command-line application that dynamically generates a professional README.md file from a user's input.
+Summary: Command-line application that dynamically generates a professional README.md file from a user's input.
 
 User Story:
 AS A developer
