@@ -11,8 +11,12 @@ const questions = [
       name: 'description',
       message: 'Please provide a description of your project:',
     },
-    // Add additional questions here
-  ];
+    {
+        type: 'input',
+        name: 'author',
+        message: 'Who is the author of the project?',
+      },
+        ];
 
   const fs = require('fs');
 
