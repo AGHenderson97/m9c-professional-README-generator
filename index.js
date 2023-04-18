@@ -40,7 +40,6 @@ const questions = [
       });
   }
 
-  // Function call to initialize app
 init()
 .then((data) => {
   console.log("Successfully created README.md!");
