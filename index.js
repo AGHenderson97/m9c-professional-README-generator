@@ -22,8 +22,19 @@ const questions = [
     );
   }
   
-// TODO: Create a function to initialize app
-function init() {}
+  function init() {
+    inquirer
+      .prompt(questions)
+      .then((answers) => {
+        const { title, description } = answers; // Destructure answers object
+        const readmeContent = `# ${title}\n\n${description}\n`; // Generate README content
+  
+        writeToFile('README.md', readmeContent); // Write README file
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
-// Function call to initialize app
-init();
+
+
