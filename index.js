@@ -1,5 +1,3 @@
-const { createRequire } = require('module');
-const require = createRequire(import.meta.url);
 const inquirer = require('inquirer');
 
 const questions = [
@@ -30,10 +28,10 @@ function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
-      const { title, description } = answers;
-      const readmeContent = `# ${title}\n\n${description}\n`;
+      const { title, description } = answers; // Destructure answers object
+      const readmeContent = `# ${title}\n\n${description}\n`; // Generate README content
 
-      writeToFile('README.md', readmeContent);
+      writeToFile('README.md', readmeContent); // Write README file
       console.log("Successfully created README.md!");
     })
     .catch((error) => {
@@ -42,4 +40,3 @@ function init() {
 }
 
 init();
-
