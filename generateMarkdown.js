@@ -65,7 +65,7 @@ ${data.tests}
 
 ## Questions
 
-If you have any questions about the project, please feel free to contact me through my [GitHub profile](https://github.com/${data.githubUsername}) or via email at ${data.email}.
+If you have any questions about the project, please feel free to contact me through my [GitHub profile](https://github.com/${data.AGHenderson97}).
 `;
 }
 
