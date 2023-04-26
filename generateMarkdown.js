@@ -42,6 +42,13 @@ This project is licensed under the ${renderLicenseLink(license)} license.
 function generateMarkdown(data) {
   return `# ${data.title}
 
+${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+${renderLicenseSection(data.license)}
 `;
 }
 
