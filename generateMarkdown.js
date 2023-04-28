@@ -1,30 +1,4 @@
-function renderLicenseBadge(license) {
-  if (!license) {
-    return "";
-  }
-
-  return `![${license} license](https://img.shields.io/badge/license-${license}-brightgreen)`;
-}
-
-function renderLicenseLink(license) {
-  if (!license) {
-    return "";
-  }
-
-  return `[${license}](https://opensource.org/licenses/${license})`;
-}
-
-function renderLicenseSection(license) {
-  if (!license) {
-    return "";
-  }
-
-  return `
-## License
-
-This project is licensed under the ${renderLicenseLink(license)} license.
-`;
-}
+import { renderLicenseBadge, renderLicenseLink, renderLicenseSection } from './renderLicense.mjs';
 
 function generateMarkdown(data) {
   return `
@@ -63,10 +37,13 @@ ${data.contributing}
 
 ${data.tests}
 
+## License
+
+This project is licensed under the ${renderLicenseLink(data.license)} license. ${renderLicenseBadge(data.license)}
+
 ## Questions
 
-If you have any questions about the project, please feel free to contact me through my [GitHub profile](https://github.com/${data.AGHenderson97}).
-`;
+If you have any questions or comments about this project, please contact me at ${data.email}. You can also visit my [GitHub profile](https://github.com/${data.github}) for additional information and resources. Thank you!`;
 }
 
-module.exports = generateMarkdown;
+export default generateMarkdown;
