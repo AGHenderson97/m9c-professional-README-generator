@@ -1,10 +1,7 @@
-import renderLicenseBadge from './utils/renderLicenseBadge.mjs';
-import renderLicenseLink from './utils/renderLicenseLink.mjs';
+import { renderLicenseSection } from './utils/renderLicense.mjs';
 
-function renderLicenseSection(license) {
-  if (!license) {
-    return "";
-  }
+function generateMarkdown(data) {
+  return 
 
   return `
 ## License
