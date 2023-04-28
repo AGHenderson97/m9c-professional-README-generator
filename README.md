@@ -28,7 +28,6 @@ To run this application, navigate to the root directory of the project in your t
 
 When you run the README Generator application, a new file named "MY-README.md" will be generated based on the responses you provide to the prompts. This file will be located in the "generated_readmes" folder in the root directory of the project. Please note that running the application multiple times will overwrite any existing "MY-README.md" files in the folder, so be sure to save any important information before generating a new file.
 
-
 ## License
 
 This project is licensed under the MIT license. If the user selects a license from the provided list, the application will also include a badge and a notice in the License section.
@@ -45,6 +44,9 @@ Contributions to this project are welcome. To contribute, follow these steps:
 ## Questions
 
 If you have any questions or comments about this project, please contact me at agh.pe.gatech@outlook.com. You can also visit my [GitHub profile](https://github.com/AGHenderson97) for additional information and resources. 
+
+## Example generated MY-README
+https://drive.google.com/file/d/1sFiQwkJFcUX8LHdr13FFhH5G3zdAecWd/view?usp=sharing
 
 ## User Story:
 
