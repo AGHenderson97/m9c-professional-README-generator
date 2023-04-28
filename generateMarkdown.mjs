@@ -1,4 +1,17 @@
-import { renderLicenseBadge, renderLicenseLink, renderLicenseSection } from './renderLicense.mjs';
+import renderLicenseBadge from './utils/renderLicenseBadge.mjs';
+import renderLicenseLink from './utils/renderLicenseLink.mjs';
+
+function renderLicenseSection(license) {
+  if (!license) {
+    return "";
+  }
+
+  return `
+## License
+
+This project is licensed under the ${renderLicenseLink(license)} license. ${renderLicenseBadge(license)}
+`;
+}
 
 function generateMarkdown(data) {
   return `
@@ -36,10 +49,6 @@ ${data.contributing}
 ## Tests
 
 ${data.tests}
-
-## License
-
-This project is licensed under the ${renderLicenseLink(data.license)} license. ${renderLicenseBadge(data.license)}
 
 ## Questions
 
