@@ -1,4 +1,41 @@
 # m9c-professional-README-generator
+function generateMarkdown(data) {
+  return `# ${data.title}
+
+## Description
+${data.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## License
+This project is licensed under the ${data.license} license.
+
+## Contributing
+${data.contribution}
+
+## Tests
+${data.test}
+
+## Questions
+For questions or comments, please contact ${data.email}. You can also visit my [GitHub profile](https://github.com/${data.github}).`;
+}
+
+module.exports = generateMarkdown;
+
+
+
 
 Description:
 A command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer packageLinks to an external site.
