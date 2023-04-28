@@ -1,4 +1,6 @@
-const inquirer = require('inquirer');
+import inquirer from 'inquirer';
+import generateMarkdown from './utils/generateMarkdown.mjs';
+import { writeToFile } from './utils/fs.mjs';
 
 const questions = [
   {
@@ -13,26 +15,49 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'author',
-    message: 'Who is the author of the project?',
+    name: 'installation',
+    message: 'Please provide installation instructions for your project:',
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'Please provide usage information for your project:',
+  },
+  {
+    type: 'input',
+    name: 'contribution',
+    message: 'Please provide contribution guidelines for your project:',
+  },
+  {
+    type: 'input',
+    name: 'tests',
+    message: 'Please provide test instructions for your project:',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Please select a license for your project:',
+    choices: ['MIT', 'GPLv2', 'Apache', 'BSD', 'None'],
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: 'Please provide your GitHub username:',
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Please provide your email address:',
   },
 ];
-
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  );
-}
 
 function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
-      const { title, description } = answers; // Destructure answers object
-      const readmeContent = `# ${title}\n\n${description}\n`; // Generate README content
-
+      const readmeContent = generateMarkdown(answers); // Generate README content
       writeToFile('README.md', readmeContent); // Write README file
-      console.log("Successfully created README.md!");
+      console.log('Successfully created README.md!');
     })
     .catch((error) => {
       console.error(error);
