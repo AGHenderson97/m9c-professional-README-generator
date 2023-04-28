@@ -1,51 +1,45 @@
 # m9c-professional-README-generator
-function generateMarkdown(data) {
-  return `# ${data.title}
 
-## Description
-${data.description}
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
-## Table of Contents
+## Description:
+This is a command-line application that dynamically generates a professional README.md file from user input. The application uses the Inquirer package to prompt the user with a series of questions about their project and generate a high-quality README file based on their responses.
+
+## Table of Contents:
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
-${data.installation}
+To use this application, you will need to have Node.js installed on your computer. You can download Node.js at https://nodejs.org/en/download/. 
+
+Once you have installed Node.js, clone this repository and navigate to the root directory. Run the following command to install the required packages/dependencies: npm install
 
 ## Usage
-${data.usage}
+To run this application, navigate to the root directory of the project in your terminal and run the command node index.mjs. You will be prompted with a series of questions about your project. Once you have answered all of the questions, a README.md file will be generated in the root directory of your project.
 
 ## License
-This project is licensed under the ${data.license} license.
+This project is licensed under the MIT license. If the user selects a license from the provided list, the application will also include a badge and a notice in the License section.
 
 ## Contributing
-${data.contribution}
-
-## Tests
-${data.test}
+Contributions to this project are welcome. To contribute, follow these steps:
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
 
 ## Questions
-For questions or comments, please contact ${data.email}. You can also visit my [GitHub profile](https://github.com/${data.github}).`;
-}
+If you have any questions or comments about this project, please contact me at agh.pe.gatech@outlook.com. You can also visit my [GitHub profile](https://github.com/AGHenderson97) for additional information and resources. 
 
-module.exports = generateMarkdown;
-
-
-
-
-Description:
-A command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer packageLinks to an external site.
-
-User Story:
+## User Story:
 AS A developer
 I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
-Acceptance Criteria:
+## Acceptance Criteria:
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
 THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -61,6 +55,3 @@ WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
-
-Deployed URL:
-https://aghenderson97.github.io/m9c-professional-README-generator/
