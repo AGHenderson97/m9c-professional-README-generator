@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import generateMarkdown from './generateMarkdown.mjs';
-import { writeToFile } from 'fs';
+import { writeToFile } from './utils/fs.mjs';
 
 const questions = [
   {
@@ -56,13 +56,8 @@ function init() {
     .prompt(questions)
     .then((answers) => {
       const readmeContent = generateMarkdown(answers); // Generate README content
-      writeToFile('README.md', readmeContent, (err) => {
-        if (err) {
-          console.error(err);
-        } else {
-          console.log('Successfully created README.md!');
-        }
-      }); // Write README file
+      writeToFile('README.md', readmeContent); // Write README file
+      console.log('Successfully created README.md!');
     })
     .catch((error) => {
       console.error(error);
@@ -70,4 +65,3 @@ function init() {
 }
 
 init();
-
