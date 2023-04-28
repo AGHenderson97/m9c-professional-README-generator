@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import generateMarkdown from './utils/generateMarkdown.mjs';
+import generateMarkdown from './generateMarkdown.mjs';
 import { writeToFile } from './utils/fs.mjs';
 
 const questions = [
