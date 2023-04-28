@@ -1,42 +1,69 @@
-const inquirer = require('inquirer');
+import inquirer from 'inquirer';
+import generateMarkdown from './generateMarkdown.mjs';
+import { writeToFile } from './utils/fs.mjs';
 
-const questions = [
-  {
-    type: 'input',
-    name: 'title',
-    message: 'What is the title of your project?',
-  },
-  {
-    type: 'input',
-    name: 'description',
-    message: 'Please provide a description of your project:',
-  },
-  {
-    type: 'input',
-    name: 'author',
-    message: 'Who is the author of the project?',
-  },
-];
+const path = './generated_readmes';
 
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  );
-}
+async function init() {
+  try {
+    const responses = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'title',
+        message: 'What is your project title?',
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Please provide a brief description of your project:',
+      },
+      {
+        type: 'input',
+        name: 'installation',
+        message: 'Please provide installation instructions for your project:',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide usage instructions for your project:',
+      },
+      {
+        type: 'input',
+        name: 'contributing',
+        message: 'Please provide contribution guidelines for your project:',
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Please provide test instructions for your project:',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'Please select a license for your project:',
+        choices: ['MIT', 'Apache', 'GPL', 'BSD', 'None'],
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Please provide your email address:',
+      },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'Please provide your GitHub username:',
+      },
+    ]);
 
-function init() {
-  inquirer
-    .prompt(questions)
-    .then((answers) => {
-      const { title, description } = answers; // Destructure answers object
-      const readmeContent = `# ${title}\n\n${description}\n`; // Generate README content
+    const filename = `${path}/MY-README.md`;
 
-      writeToFile('README.md', readmeContent); // Write README file
-      console.log("Successfully created README.md!");
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    const markdown = generateMarkdown(responses);
+    await writeToFile(filename, markdown);
+
+    console.log(`Your README file has been generated and is located in ${filename}`);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 init();
