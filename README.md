@@ -8,8 +8,10 @@ This is a command-line application that dynamically generates a professional REA
 
 ## Table of Contents:
 
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Walkthrough Video](#walkthrough-video)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
@@ -27,6 +29,10 @@ To run this application, navigate to the root directory of the project in your t
 ## Generated README Files
 
 When you run the README Generator application, a new file named "MY-README.md" will be generated based on the responses you provide to the prompts. This file will be located in the "generated_readmes" folder in the root directory of the project. Please note that running the application multiple times will overwrite any existing "MY-README.md" files in the folder, so be sure to save any important information before generating a new file.
+
+## Walkthrough Video
+
+A walkthrough video demonstrating the application's functionality can be found [here](https://drive.google.com/file/d/19a-Y2qnXY-YE-giNRX9zuQXGYM8g8QJl/view?usp=share_link).
 
 ## License
 
