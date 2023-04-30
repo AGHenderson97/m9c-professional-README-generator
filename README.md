@@ -51,7 +51,7 @@ Contributions to this project are welcome. To contribute, follow these steps:
 
 If you have any questions or comments about this project, please contact me at agh.pe.gatech@outlook.com. You can also visit my [GitHub profile](https://github.com/AGHenderson97) for additional information and resources. 
 
-## Example generated MY-README
+## Example
 
 Follow the link below to view an example of a README file that was generated with this application:
 https://drive.google.com/file/d/1sFiQwkJFcUX8LHdr13FFhH5G3zdAecWd/view?usp=sharing
