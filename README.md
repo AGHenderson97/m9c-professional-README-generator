@@ -20,13 +20,13 @@ This is a command-line application that dynamically generates a professional REA
 
 To use this application, you will need to have Node.js installed on your computer. You can download Node.js at https://nodejs.org/en/download/. 
 
-Once you have installed Node.js, clone this repository and navigate to the root directory. Run the following command to install the required packages/dependencies: npm install
+Once you have installed Node.js, clone this repository and navigate to the root directory. Run the following command to install the required packages/dependencies: 'npm install'
 
 ## Usage
 
-To run this application, navigate to the root directory of the project in your terminal and run the command node index.mjs. You will be prompted with a series of questions about your project. 
+To run this application, navigate to the root directory of the project in your terminal and run the command 'node --experimental index.mjs'. You will be prompted with a series of questions about your project. 
 
-## Generated README Files
+## Generated README. Files
 
 When you run the README Generator application, a new file named "MY-README.md" will be generated based on the responses you provide to the prompts. This file will be located in the "generated_readmes" folder in the root directory of the project. Please note that running the application multiple times will overwrite any existing "MY-README.md" files in the folder, so be sure to save any important information before generating a new file.
 
@@ -53,13 +53,13 @@ If you have any questions or comments about this project, please contact me at a
 
 ## Example
 
-Follow the link below to view an example of a README file that was generated with this application:
+Follow the link below to view an example of a MY-README.md file that was generated with this application:
 https://drive.google.com/file/d/1sFiQwkJFcUX8LHdr13FFhH5G3zdAecWd/view?usp=sharing
 
 ## User Story:
 
 AS A developer
-I WANT a README generator
+I WANT a README.md generator
 SO THAT I can quickly create a professional README for a new project
 
 ## Acceptance Criteria:
