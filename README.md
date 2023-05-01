@@ -24,7 +24,7 @@ Once you have installed Node.js, clone this repository and navigate to the root 
 
 ## Usage
 
-To run this application, navigate to the root directory of the project in your terminal and run the command 'node --experimental index.mjs'. You will be prompted with a series of questions about your project. 
+To run this application, navigate to the root directory of the project in your terminal and run the command 'node --experimental index.mjs' You will be prompted with a series of questions about your project. 
 
 ## Generated README. Files
 
